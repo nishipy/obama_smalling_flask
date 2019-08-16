@@ -1,5 +1,5 @@
 import os, sys
-from flask import Flask, flash, request, redirect, url_for, render_template
+from flask import Flask, flash, request, redirect, url_for, render_template, send_from_directory
 from werkzeug.utils import secure_filename
 from keras.models import load_model
 import numpy as np
@@ -48,7 +48,7 @@ def predict():
             global graph
             with graph.as_default():
                 pred = model.predict(x, batch_size=1, verbose=0)
-                score = np.max(pred)
+                score = pred[0][0]
                 if(score >= 0.5):
                     person = 'Smalling'
                 else:
@@ -59,6 +59,10 @@ def predict():
             
             return render_template('result.html', resultmsg=resultmsg, filepath=filepath)
     return render_template('predict.html')
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 if __name__ == '__main__':
     app.run()
