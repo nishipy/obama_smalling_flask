@@ -1,4 +1,7 @@
 # obama-smalling-flask
+## 関連ブログ
+[FlaskとKerasでオバマとスモーリングを自動判別するWebアプリケーションを作る -前編-](https://nishipy.com/archives/1162)
+
 ## 実行方法
 ```shell
 $ export FLASK_APP=predict.py
