@@ -2,4 +2,4 @@
 
 
 ## 動作例
-[お盆休みなのでflaskで遊んでる](https://twitter.com/i/status/1161564025454379009)
+<a href="https://twitter.com/i/status/1161564025454379009" target="_blank">お盆休みなのでflaskで遊んでる</a>
