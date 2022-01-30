@@ -1,5 +1,8 @@
 # Flask app for Obama or Smalling Prediction
 
+This is a simple Flask application for Obama or Smalling Prediction.
+For more detail, see the [obama_smalling_predictor](https://github.com/nishipy/obama_smalling_predictor) repo!
+
 ## Prerequiste
 ```
 $ conda -V
