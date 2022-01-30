@@ -14,7 +14,6 @@ $ conda activate os-flask
 $ pip install -r ./requirements.txt
 ```
 
-
 ## Run flask app
 ```shell
 $ cd <THIS_REPO>/src/
@@ -26,7 +25,8 @@ Then you can see the app runnning on your [`localhost:5000/predict`](http://loca
 
 ## Demo
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">お盆休みなのでflaskで遊んでる <a href="https://t.co/eVHuBMx8ZZ">pic.twitter.com/eVHuBMx8ZZ</a></p>&mdash; nishipy (@iamnishipy) <a href="https://twitter.com/iamnishipy/status/1161564025454379009?ref_src=twsrc%5Etfw">August 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://user-images.githubusercontent.com/41185206/151708123-6570335d-b979-43ba-89c6-0ea7e76503b8.mp4
+
 
 ## Related blog post and tweet
 - [FlaskとKerasでオバマとスモーリングを自動判別するWebアプリケーションを作る -前編-](https://nishipy.com/archives/1162)
