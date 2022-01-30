@@ -34,3 +34,6 @@ https://user-images.githubusercontent.com/41185206/151708123-6570335d-b979-43ba-
 ## Related blog post and tweet
 - [FlaskとKerasでオバマとスモーリングを自動判別するWebアプリケーションを作る -前編-](https://nishipy.com/archives/1162)
 - [お盆休みなのでflaskで遊んでる](https://twitter.com/i/status/1161564025454379009)
+
+## Next step
+We will host this app on GCP(GAE and Cloud Storage). See this repo [obama_smalling_flask_gcp](https://github.com/nishipy/obama_smalling_flask_gcp)
