@@ -1,18 +1,15 @@
 import os, sys
 from flask import Flask, flash, request, redirect, url_for, render_template, send_from_directory
 from werkzeug.utils import secure_filename
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 app = Flask(__name__)
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-
-model = load_model('obama_smalling_201908.h5')
-graph = tf.get_default_graph()
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -45,8 +42,9 @@ def predict():
             x = x / 255.
             x = x.reshape((1,) + x.shape)
             
-            global graph
+            graph = tf.get_default_graph()
             with graph.as_default():
+                model = load_model('./model/obama_smalling_201908.h5')
                 pred = model.predict(x, batch_size=1, verbose=0)
                 score = pred[0][0]
                 if(score >= 0.5):
@@ -65,4 +63,4 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=3000)
